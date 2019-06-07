@@ -8,4 +8,9 @@ RUN add-apt-repository -y restricted
 RUN apt-get update
 RUN apt-get install -y heimdall-astro
 
+COPY run.sh /
+
+RUN chmod a+x /run.sh
+
+CMD ["/run.sh"]
 # heimdall -f /data/simpulse_nfrb20_DM35-1977_214sec_20190603-0837.fil

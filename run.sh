@@ -1,6 +1,6 @@
 #!/bin/bash
 TMP_PATH="/tmp/heimdall"
-INPUT_PATH="/data/simpulse_nfrb20_DM35-1977_214sec_20190603-0837.fil"
+INPUT_PATH="/data/input/test_data"
 OUTPUT_PATH="/data/output"
 mkdir -p $TMP_PATH
 heimdall -v -f $INPUT_PATH -dm 10. 3000. -rfi_no_narrow -rfi_no_broad -output_dir $TMP_PATH
