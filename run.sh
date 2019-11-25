@@ -5,4 +5,4 @@ OUTPUT_PATH="/data/output"
 mkdir -p $TMP_PATH
 heimdall -v -f $INPUT_PATH -dm 10. 3000. -rfi_no_narrow -rfi_no_broad -output_dir $TMP_PATH
 # cols: DM, S/N, TIME, LOG_2_DOWNSAMPLE
-cat $TMP_PATH/*.cand | awk 'BEGIN{FS=" "} { print $6 " " $1 " " $3 " " 2^$4 }' > $OUTPUT_PATH
+cat $TMP_PATH/*.cand | awk 'BEGIN{FS=" "} { print $6 " " $1 " " $3 " " 2^$4 " " 1536.00 }' > $OUTPUT_PATH
